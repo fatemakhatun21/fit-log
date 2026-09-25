@@ -1,12 +1,14 @@
 import React from 'react';
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import Library from "./components/Library";
 
 const FitLog = () => {
   return (
     <div>
       <Navbar />
       <Hero />
+      <Library />
     </div>
   );
 };

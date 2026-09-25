@@ -13,7 +13,9 @@ const Navbar = () => {
             <div className="navbar-center">
                 <ul className="menu menu-horizontal px-1">
                     <li>
-                        <a>Workout</a>
+                        <Link href="/" className="bg-[#ccff00] text-black font-semibold">
+                            Workout
+                        </Link>
                     </li>
                     <li>
                         <a>My Plan</a>
