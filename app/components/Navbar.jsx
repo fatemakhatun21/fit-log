@@ -1,7 +1,9 @@
+"use client";
 import React from 'react'
 import Link from "next/link";
-
+import { usePlan } from "./PlanContext";
 const Navbar = () => {
+    const { plan, saved } = usePlan();
     return (
         <div className="navbar bg-[#0b0d0f] px-5 lg:px-12 border-b border-gray-800">
             <div className="navbar-start">
@@ -26,10 +28,10 @@ const Navbar = () => {
             </div>
             <div className="navbar-end gap-2">
                 <Link href="/my-plan" className="btn btn-sm rounded-full bg-[#ccff00] text-black border-none">
-                    Plan 0
+                    Plan {plan.length}
                 </Link>
                 <Link href="/my-plan" className="btn btn-sm btn-outline rounded-full">
-                    Saved 0
+                    Saved {saved.length}
                 </Link>
             </div>
         </div>

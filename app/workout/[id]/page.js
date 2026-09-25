@@ -1,3 +1,4 @@
+import WorkoutActions from "../../components/WorkoutActions";
 const WorkoutDetails = async ({ params }) => {
     const { id } = await params;
 
@@ -81,12 +82,7 @@ const WorkoutDetails = async ({ params }) => {
                         </ol>
                     </div>
                     <div className="flex flex-wrap gap-3 mt-8">
-                        <button className="btn bg-[#ccff00] text-black border-none">
-                            Add to today&apos;s plan
-                        </button>
-                        <button className="btn btn-outline">
-                            Save for later
-                        </button>
+                        <WorkoutActions workout={workout} />
                     </div>
                 </div>
             </div>
