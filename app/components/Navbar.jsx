@@ -18,13 +18,19 @@ const Navbar = () => {
                         </Link>
                     </li>
                     <li>
-                        <a>My Plan</a>
+                        <Link href="/my-plan">
+                            My Plan
+                        </Link>
                     </li>
                 </ul>
             </div>
             <div className="navbar-end gap-2">
-                <button className="btn">Plan 0</button>
-                <button className="btn">Saved 0</button>
+                <Link href="/my-plan" className="btn btn-sm rounded-full bg-[#ccff00] text-black border-none">
+                    Plan 0
+                </Link>
+                <Link href="/my-plan" className="btn btn-sm btn-outline rounded-full">
+                    Saved 0
+                </Link>
             </div>
         </div>
     );
