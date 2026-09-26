@@ -16,7 +16,7 @@ const Library = () => {
             });
     }, []);
     return (
-        <section id="library" className="px-5 lg:px-12 py-16">
+        <section id="library" className="px-4 sm:px-6 lg:px-12 py-12 lg:py-16">
             <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-5">
                 <div>
                     <h2 className="text-4xl font-bold">

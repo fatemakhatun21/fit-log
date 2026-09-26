@@ -15,11 +15,10 @@ const WorkoutDetails = async ({ params }) => {
                     <img
                         src={workout.image}
                         alt={workout.name}
-                        className="w-full rounded-xl object-cover"
-                    />
+                        className="w-full h-72 sm:h-96 lg:h-128 rounded-xl object-cover" />
                 </div>
                 <div>
-                    <h1 className="text-4xl lg:text-5xl font-bold uppercase">
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold uppercase">
                         {workout.name}
                     </h1>
                     <p className="text-gray-400 mt-4 leading-7">

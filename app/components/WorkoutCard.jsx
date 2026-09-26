@@ -7,7 +7,7 @@ const WorkoutCard = ({ workout }) => {
             <div className="card bg-[#141719] border border-gray-800 overflow-hidden cursor-pointer">
                 <figure>
                     <img src={workout.image} alt={workout.name}
-                        className="w-full h-56 object-cover" />
+                        className="w-full h-48 sm:h-56 object-cover" />
                 </figure>
 
                 <div className="card-body">
@@ -25,7 +25,7 @@ const WorkoutCard = ({ workout }) => {
                     <p className="text-gray-400">
                         {workout.equipment}
                     </p>
-                    <div className="flex items-center gap-5 mt-3 text-sm text-gray-300">
+                    <div className="flex flex-wrap items-center gap-4 mt-3 text-sm text-gray-300">
                         <div className="flex items-center gap-1">
                             <Clock size={16} />
                             <span>{workout.duration} min</span>

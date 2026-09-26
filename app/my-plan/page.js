@@ -60,9 +60,9 @@ const MyPlan = () => {
         );
     }
     return (
-        <section className="px-5 lg:px-12 py-12">
+        <section className="px-4 sm:px-6 lg:px-12 py-10 lg:py-12">
             <div>
-                <h1 className="text-4xl lg:text-5xl font-bold">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
                     MY PLAN
                 </h1>
                 <p className="text-gray-400 mt-2">
@@ -83,21 +83,21 @@ const MyPlan = () => {
                     <h2 className="text-3xl font-bold mt-2">{totalCalories}</h2>
                 </div>
             </div>
-            <div className="tabs tabs-box mt-10 w-fit">
-                <button
-                    onClick={() => setActiveTab("plan")}
-                    className={`tab ${activeTab === "plan" ? "tab-active" : ""}`}>
-                    Today&apos;s Plan
-                </button>
-                <button
-                    onClick={() => setActiveTab("saved")}
-                    className={`tab ${activeTab === "saved" ? "tab-active" : ""}`}>
-                    Saved
-                </button>
-            </div>
-            <div className="mt-6 flex justify-end">
-                <div>
-                    <label className="text-sm text-gray-400 mr-2">
+            <div className="mt-10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                <div className="tabs tabs-box w-fit">
+                    <button
+                        onClick={() => setActiveTab("plan")}
+                        className={`tab ${activeTab === "plan" ? "tab-active" : ""}`}>
+                        Today&apos;s Plan
+                    </button>
+                    <button
+                        onClick={() => setActiveTab("saved")}
+                        className={`tab ${activeTab === "saved" ? "tab-active" : ""}`}>
+                        Saved
+                    </button>
+                </div>
+                <div className="flex items-center gap-2">
+                    <label className="text-sm text-gray-400">
                         Sort By
                     </label>
                     <select

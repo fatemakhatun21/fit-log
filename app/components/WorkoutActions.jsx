@@ -26,7 +26,7 @@ const WorkoutActions = ({ workout }) => {
         toast.success("Saved for later");
     };
     return (
-        <div className="flex flex-wrap gap-3 mt-8">
+        <div className="flex flex-col sm:flex-row gap-3 mt-8">
             <button
                 onClick={handleAddToPlan}
                 className="btn bg-[#ccff00] text-black border-none">
