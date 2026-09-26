@@ -21,12 +21,8 @@ export const PlanProvider = ({ children }) => {
     return (
         <PlanContext.Provider
             value={{
-                plan,
-                setPlan,
-                saved,
-                setSaved,
-            }}>
-            {children}
+                plan, setPlan, saved, setSaved, isLoaded
+                }}> {children}
         </PlanContext.Provider>
     );
 };
