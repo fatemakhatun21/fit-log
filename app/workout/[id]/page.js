@@ -2,8 +2,7 @@ import WorkoutActions from "../../components/WorkoutActions";
 const WorkoutDetails = async ({ params }) => {
     const { id } = await params;
 
-    const res = await fetch(
-        `https://api.abcz.workers.dev/api/fitlog/${id}`
+    const res = await fetch(`https://api.api-store.workers.dev/api/fitlog/${id}`
     );
 
     const workout = await res.json();
