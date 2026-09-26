@@ -3,7 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePlan } from "../components/PlanContext";
 import { toast } from "react-toastify";
-import { Check, X } from "lucide-react";
+import { Check, X, Clock, Flame, Star } from "lucide-react";
 const MyPlan = () => {
     const { plan, setPlan, saved, setSaved, isLoaded } = usePlan();
     const [activeTab, setActiveTab] = useState("plan");
@@ -139,10 +139,22 @@ const MyPlan = () => {
                                 <p className="text-gray-400">
                                     {workout.equipment}
                                 </p>
-                                <p className="text-sm mt-2">
-                                    {workout.duration} min · {workout.caloriesBurned} kcal · ⭐{" "}
-                                    {workout.rating}
-                                </p>
+                                <div className="flex flex-wrap items-center gap-4 text-sm mt-2">
+                                    <span className="flex items-center gap-1">
+                                        <Clock size={16} />
+                                        {workout.duration} min
+                                    </span>
+
+                                    <span className="flex items-center gap-1">
+                                        <Flame size={16} />
+                                        {workout.caloriesBurned} kcal
+                                    </span>
+
+                                    <span className="flex items-center gap-1">
+                                        <Star size={16} />
+                                        {workout.rating}
+                                    </span>
+                                </div>
                             </div>
                             <div className="flex flex-wrap gap-2">
                                 <Link
@@ -152,6 +164,7 @@ const MyPlan = () => {
                                 </Link>
                                 {activeTab === "plan" && (
                                     <button
+                                        disabled={workout.done}
                                         onClick={() => handleDone(workout.id)}
                                         className="btn btn-sm bg-[#ccff00] text-black border-none">
                                         <Check size={16} />

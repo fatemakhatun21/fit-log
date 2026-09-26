@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Clock, Flame, Star } from "lucide-react";
-
 const WorkoutCard = ({ workout }) => {
     return (
         <Link href={`/workout/${workout.id}`}>

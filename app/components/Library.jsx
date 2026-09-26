@@ -10,8 +10,12 @@ const Library = () => {
         fetch("https://api.api-store.workers.dev/api/fitlog")
             .then((res) => res.json())
             .then((data) => {
-                console.log(data);
                 setWorkouts(data);
+            })
+            .catch((error) => {
+                console.error(error);
+            })
+            .finally(() => {
                 setLoading(false);
             });
     }, []);

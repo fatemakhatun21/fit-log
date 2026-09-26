@@ -17,12 +17,26 @@ const Navbar = () => {
                     <ul tabIndex={-1}
                         className="menu menu-sm dropdown-content bg-[#141719] rounded-box z-20 mt-3 w-52 p-2 shadow">
                         <li>
-                            <Link href="/">
+                            <Link
+                                href="/"
+                                className={
+                                    pathname === "/" || pathname.startsWith("/workout/")
+                                        ? "bg-[#263300] text-[#ccff00] font-semibold"
+                                        : ""
+                                }
+                            >
                                 Workout
                             </Link>
                         </li>
                         <li>
-                            <Link href="/my-plan">
+                            <Link
+                                href="/my-plan"
+                                className={
+                                    pathname === "/my-plan"
+                                        ? "bg-[#263300] text-[#ccff00] font-semibold"
+                                        : ""
+                                }
+                            >
                                 My Plan
                             </Link>
                         </li>
@@ -56,7 +70,7 @@ const Navbar = () => {
             <div className="navbar-end gap-4 sm:gap-5">
 
                 <Link
-                    href="/my-plan?tab=plan"
+                    href="/my-plan"
                     className="flex items-center gap-2 text-sm text-gray-300">
                     <span>Plan</span>
                     <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[#ccff00] text-black text-xs font-bold">
@@ -64,7 +78,7 @@ const Navbar = () => {
                     </span>
                 </Link>
                 <Link
-                    href="/my-plan?tab=saved"
+                    href="/my-plan"
                     className="flex items-center gap-2 text-sm text-gray-400">
                     <span>Saved</span>
                     <span className="w-5 h-5 flex items-center justify-center rounded-full border border-gray-600 text-xs">
