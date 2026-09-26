@@ -1,6 +1,6 @@
 const Footer = () => {
     return (
-        <footer className="border-t border-gray-800 px-4 sm:px-6 lg:px-12 py-6 lg:py-8 mt-12 lg:mt-16">
+        <footer className="border-t border-gray-800 px-4 sm:px-6 lg:px-12 py-6 lg:py-8 mt-4 lg:mt-6">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                 <div className="flex items-center gap-2">
                     <img src="/logo.png" alt="FitLog Logo"

@@ -37,29 +37,39 @@ const Navbar = () => {
                 </Link>
             </div>
             <div className="navbar-center hidden md:flex">
-                <ul className="menu menu-horizontal px-1">
+                <ul className="menu menu-horizontal px-1 gap-2">
                     <li>
                         <Link href="/" className={pathname === "/" || pathname.startsWith("/workout/")
-                            ? "bg-[#ccff00] text-black font-semibold" : ""}>
+                            ? "bg-[#263300] text-[#ccff00] font-semibold rounded-full px-4" : ""}>
                             Workout
                         </Link>
                     </li>
                     <li>
                         <Link
                             href="/my-plan"
-                            className={pathname === "/my-plan" ? "bg-[#ccff00] text-black font-semibold" : ""}>
+                            className={pathname === "/my-plan" ? "bg-[#263300] text-[#ccff00] font-semibold rounded-full px-4" : ""}>
                             My Plan
                         </Link>
                     </li>
                 </ul>
             </div>
-            <div className="navbar-end gap-1 sm:gap-2">
-                <Link href="/my-plan?tab=plan" className="btn btn-xs sm:btn-sm rounded-full bg-[#ccff00] text-black border-none">
-                    Plan {plan.length}
+            <div className="navbar-end gap-4 sm:gap-5">
+
+                <Link
+                    href="/my-plan?tab=plan"
+                    className="flex items-center gap-2 text-sm text-gray-300">
+                    <span>Plan</span>
+                    <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[#ccff00] text-black text-xs font-bold">
+                        {plan.length}
+                    </span>
                 </Link>
-                <Link href="/my-plan?tab=saved"
-                    className="btn btn-xs sm:btn-sm btn-outline rounded-full">
-                    Saved {saved.length}
+                <Link
+                    href="/my-plan?tab=saved"
+                    className="flex items-center gap-2 text-sm text-gray-400">
+                    <span>Saved</span>
+                    <span className="w-5 h-5 flex items-center justify-center rounded-full border border-gray-600 text-xs">
+                        {saved.length}
+                    </span>
                 </Link>
             </div>
         </div>

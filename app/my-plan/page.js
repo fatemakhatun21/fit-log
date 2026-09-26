@@ -60,7 +60,7 @@ const MyPlan = () => {
         );
     }
     return (
-        <section className="px-4 sm:px-6 lg:px-12 py-10 lg:py-12">
+        <section className="px-4 sm:px-6 lg:px-12 pt-10 pb-4 lg:pt-12 lg:pb-6">
             <div>
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
                     MY PLAN
@@ -96,8 +96,8 @@ const MyPlan = () => {
                         Saved
                     </button>
                 </div>
-                <div className="flex items-center gap-2">
-                    <label className="text-sm text-gray-400">
+                <div className="flex items-center gap-3">
+                    <label className="text-sm text-gray-400 whitespace-nowrap">
                         Sort By
                     </label>
                     <select
